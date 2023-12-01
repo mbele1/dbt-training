@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: training
+    description:  Training schema tables
+    database: dbt
+    schema: training
+    tables: 
+    
+      - name: events
+        description:  "Events table"
+      - name: client
+        description:  "clients table"
+        columns:
+          - name: base_entity_id
+            tests:
+              - unique
+              - not_null
+  

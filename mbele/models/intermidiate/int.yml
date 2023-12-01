@@ -1,0 +1,10 @@
+version:  2
+
+models:
+  - name: int_client_events
+    columns:  
+     -  name: base_entity_id
+        tests:  
+          - relationships:
+              to: ref('stg_client')
+              field:  base_entity_id  
